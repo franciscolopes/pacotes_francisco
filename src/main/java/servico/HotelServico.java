@@ -2,9 +2,9 @@ package servico;
 
 import java.util.List;
 
-import dao.HotelDao;
 import dao.DaoFactory;
-import dao.impl.EM;
+import dao.HotelDao;
+import dao.Transaction;
 import dominio.Hotel;
 
 public class HotelServico {
@@ -17,15 +17,31 @@ private HotelDao dao;
 	
 	
 	public void inserirAtualizar(Hotel x){
-		EM.getLocalEm().getTransaction().begin();
-		dao.inserirAtualizar(x);
-		EM.getLocalEm().getTransaction().commit();
+		try {
+			Transaction.begin();
+			dao.inserirAtualizar(x);
+			Transaction.commit();
+		}
+		catch (RuntimeException e) {
+			if (Transaction.isActive()) {
+				Transaction.rollback();
+			}
+			System.out.println("Erro: " + e.getMessage());
+		}
 	}
 	
 	public void excluir(Hotel x){
-		EM.getLocalEm().getTransaction().begin();
-		dao.excluir(x);
-		EM.getLocalEm().getTransaction().commit();
+		try {
+			Transaction.begin();
+			dao.excluir(x);
+			Transaction.commit();
+		}
+		catch (RuntimeException e) {
+			if (Transaction.isActive()) {
+				Transaction.rollback();
+			}
+			System.out.println("Erro: " + e.getMessage());
+		}
 	}
 	
 	public Hotel buscar(int cod){
