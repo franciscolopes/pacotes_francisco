@@ -43,4 +43,15 @@ public class ClienteDaoImpl implements ClienteDao {
 		return query.getResultList();
 	}
 
+	@SuppressWarnings("unchecked")
+	@Override
+	public List<Cliente> buscarTodosOrdenadosPorNome() {
+		String jpql = "SELECT x FROM Cliente x ORDER BY x.nome";
+		Query query = em.createQuery(jpql);
+		return query.getResultList();
+	}
+	
+	
+	
+	
 }

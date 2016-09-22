@@ -11,5 +11,7 @@ public interface ClienteDao {
 	public Cliente buscar(int cod);
 	public List<Cliente> buscarTodos();
 	
+	public List<Cliente> buscarTodosOrdenadosPorNome();
+	
 
 }

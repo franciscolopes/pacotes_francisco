@@ -52,4 +52,9 @@ private ClienteDao dao;
 		return dao.buscarTodos();
 	}
 
+	
+	public List<Cliente> buscarTodosOrdenadosPorNome() {
+		return dao.buscarTodosOrdenadosPorNome();
+	}
+	
 }
