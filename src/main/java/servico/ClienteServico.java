@@ -78,4 +78,9 @@ private ClienteDao dao;
 		return dao.buscarTodosOrdenadosPorNome();
 	}
 	
+	public List<Cliente> buscarPorNome(String trecho) {
+		return dao.buscarPorNome(trecho);
+	}
+	
+	
 }

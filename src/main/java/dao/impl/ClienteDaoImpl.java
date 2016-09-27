@@ -52,6 +52,13 @@ public class ClienteDaoImpl implements ClienteDao {
 	}
 	
 	
-	
+	@SuppressWarnings("unchecked")
+	@Override
+	public List<Cliente> buscarPorNome(String trecho) {
+		String jpql = "SELECT x FROM Cliente x WHERE x.nome LIKE :p1";
+		Query query = em.createQuery(jpql);
+		query.setParameter("p1", "%"+trecho+"%");
+		return query.getResultList();
+	}
 	
 }
