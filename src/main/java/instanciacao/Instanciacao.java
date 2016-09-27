@@ -82,9 +82,9 @@ public class Instanciacao extends HttpServlet {
 			ItemServico is = new ItemServico();
 			ContratoServico crs = new ContratoServico();
 			
-			cls.inserirAtualizar(cl1);
-			cls.inserirAtualizar(cl2);
-			cls.inserirAtualizar(cl3);
+			cls.inserir(cl1);
+			cls.inserir(cl2);
+			cls.inserir(cl3);
 			
 			hs.inserirAtualizar(h1);
 			hs.inserirAtualizar(h2);

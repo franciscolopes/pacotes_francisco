@@ -16,7 +16,7 @@ private ClienteDao dao;
 	}
 	
 	
-	public void inserirAtualizar(Cliente x){
+	public void inserir(Cliente x){
 		try {
 			Transaction.begin();
 			dao.inserirAtualizar(x);
@@ -29,6 +29,27 @@ private ClienteDao dao;
 			System.out.println("Erro: " + e.getMessage());
 		}
 	}
+	
+	
+	public void atualizar(Cliente x){
+		try {
+			Transaction.begin();
+			dao.inserirAtualizar(x);
+			Transaction.commit();
+		}
+		catch (RuntimeException e) {
+			if (Transaction.isActive()) {
+				Transaction.rollback();
+			}
+			System.out.println("Erro: " + e.getMessage());
+		}
+	}
+	
+	
+	
+	
+	
+	
 	
 	public void excluir(Cliente x){
 		try {
