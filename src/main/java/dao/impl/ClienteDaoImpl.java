@@ -61,4 +61,16 @@ public class ClienteDaoImpl implements ClienteDao {
 		return query.getResultList();
 	}
 	
+	
+	@SuppressWarnings("unchecked")
+	@Override
+	public Cliente buscaCpf(String cpf) {
+		String jpql = "SELECT x FROM Cliente x WHERE x.cpf = :p1";
+		Query query = em.createQuery(jpql);
+		query.setParameter("p1", cpf);
+		List<Cliente> aux = query.getResultList();
+		return (aux.size() > 0) ? aux.get(0) : null;
+	}
+	
+	
 }

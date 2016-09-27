@@ -13,5 +13,5 @@ public interface ClienteDao {
 	
 	public List<Cliente> buscarTodosOrdenadosPorNome();
 	public List<Cliente> buscarPorNome(String trecho);
-
+	public Cliente buscaCpf(String cpf);
 }

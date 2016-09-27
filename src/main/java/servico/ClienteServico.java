@@ -16,8 +16,18 @@ private ClienteDao dao;
 	}
 	
 	
-	public void inserir(Cliente x){
+	public void inserir(Cliente x)  throws ServicoException {
 		try {
+			
+			
+			Cliente aux = dao.buscaCpf(x.getCpf());
+			if (aux != null) {
+				throw new ServicoException("Já existe um cliente com esse cpf!", 1);
+			}
+
+			
+			
+			
 			Transaction.begin();
 			dao.inserirAtualizar(x);
 			Transaction.commit();
