@@ -41,6 +41,7 @@ private ClienteDao dao;
 	}
 	
 	
+
 	public void atualizar(Cliente x)  throws ServicoException {
 		try {
 			
@@ -51,6 +52,7 @@ private ClienteDao dao;
 			
 			
 			
+
 			Transaction.begin();
 			dao.inserirAtualizar(x);
 			Transaction.commit();
@@ -69,6 +71,7 @@ private ClienteDao dao;
 	
 	
 	
+
 	public void excluir(Cliente x) throws ServicoException {
 		try {
 			
@@ -79,6 +82,7 @@ private ClienteDao dao;
 			
 			}
 			
+
 			Transaction.begin();
 			dao.excluir(x);
 			Transaction.commit();

@@ -15,4 +15,5 @@ public interface ClienteDao {
 	public List<Cliente> buscarPorNome(String trecho);
 	public Cliente buscaCpf(String cpf);
 	public Cliente buscaCpfDiferente(Integer codigo, String cpf);
+
 }

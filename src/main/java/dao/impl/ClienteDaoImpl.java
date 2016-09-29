@@ -72,6 +72,7 @@ public class ClienteDaoImpl implements ClienteDao {
 		return (aux.size() > 0) ? aux.get(0) : null;
 	}
 	
+
 	@SuppressWarnings("unchecked")
 	@Override
 	public Cliente buscaCpfDiferente(Integer codigo, String cpf) {
@@ -82,5 +83,6 @@ public class ClienteDaoImpl implements ClienteDao {
 		List<Cliente> aux = query.getResultList();
 		return (aux.size() > 0) ? aux.get(0) : null;
 	}
+
 	
 }
