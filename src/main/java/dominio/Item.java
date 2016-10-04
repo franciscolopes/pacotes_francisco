@@ -38,7 +38,7 @@ public class Item implements Serializable {
 		this.codItem = codItem;
 		this.ordem = ordem;
 		this.pacote = pacote;
-		pacote.addItem(this);
+		//pacote.addItem(this);
 		this.passeio = passeio;
 		passeio.addItem(this);
 	}
