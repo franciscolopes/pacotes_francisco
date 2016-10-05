@@ -32,7 +32,7 @@ public class ServletTeste extends HttpServlet {
 			sdf.parse("01/01/2000");
 			
 			
-			//declaraÁ„o dos objetos das classes serviÁos
+			//declara√ß√£o dos objetos das classes servi√ßos
 			ClienteServico cls = new ClienteServico();
 			HotelServico hs = new HotelServico();
 			PasseioServico pss = new PasseioServico();
@@ -62,8 +62,6 @@ public class ServletTeste extends HttpServlet {
 			}*/
 			
 			
-			
-			
 /*			
 			//alterar cliente
 			Cliente c1 = cls.buscar(1);
@@ -82,10 +80,6 @@ public class ServletTeste extends HttpServlet {
 			}*/
 			
 			
-			
-			
-			
-			
 			//excluir cliente
 			/* Cliente c1 = cls.buscar(1);
 			try {
@@ -96,16 +90,6 @@ public class ServletTeste extends HttpServlet {
 			catch (ServicoException e) {
 				response.getWriter().append(e.getMessage()+"\n");
 			}*/
-			 
-			 
-			 
-			 
-			 
-			 
-			 
-			 
-			 
-			 
 			 
 
 /*			
@@ -120,10 +104,6 @@ public class ServletTeste extends HttpServlet {
 			catch (ServicoException e) {
 				response.getWriter().append(e.getMessage()+"\n");
 			}*/
-			
-			
-			
-			
 			
 			
 			//alterar cliente com cpf repetido
@@ -144,21 +124,45 @@ public class ServletTeste extends HttpServlet {
 			}
 			
 			
-			
-			
-			
 			//excluir cliente que possui contratos cadastrados
 			
 			//pesquisar hotel
+			/*
+			List<Hotel> lista = hs.buscaPorNomeOrdenadoPorPreco("o", new BigDecimal("200.00"), new BigDecimal("1000.00"));//nome, diariaMin, diariaMax
+			for (Hotel x : lista) {
+				response.getWriter().append(x + "\n");
+			}*/
+			
+			
 			
 			//incluir item de pacote
 			
-			//incluir item de pacote que j· contem o passeio selecionado
+			//incluir item de pacote que j√° contem o passeio selecionado
+			/*			
+			// verificar se esse caso gera um item repetido
+			
+			Pacote p1 = ps.buscar(1);
+			Passeio ps1 = psss.buscar(2);
+			Item i1 = new Item(null, 1, p1,ps1);
+			try {
+				is.inserir(i1);
+				response.getWriter().append("Item inserido!\n");
+			}
+			catch (ServicoException e) {
+				response.getWriter().append(e.getMessage());
+			}
+*/
+			
+			
+			
+			
+			
+			
 			
 		
 		}
 		catch (ParseException e) {
-			response.getWriter().append("Data inv·lida!");
+			response.getWriter().append("Data inv√°lida!");
 		}
 		
 		
