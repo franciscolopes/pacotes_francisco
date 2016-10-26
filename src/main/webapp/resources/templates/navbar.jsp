@@ -14,12 +14,12 @@
 		</div>
 		<div id="navbar" class="collapse navbar-collapse">
 			<ul class="nav navbar-nav">
-				<li><a href="<%=request.getContextPath()%>/artista/listar">Cadastro
-						de Artistas</a></li>
-				<li><a href="<%=request.getContextPath()%>/filme/pesquisar">Pesquisar
-						Filmes</a></li>
-				<li><a href="<%=request.getContextPath()%>/participacao/filmes">Inserir
-						Participação</a></li>
+				<li><a href="<%=request.getContextPath()%>/cliente/listar">Cadastro
+						de Clientes</a></li>
+				<li><a href="<%=request.getContextPath()%>/hotel/pesquisar">Pesquisar
+						Hotéis</a></li>
+				<li><a href="<%=request.getContextPath()%>/item/pacote">Inserir
+						Item em Pacote</a></li>
 			</ul>
 		</div>
 		<!--/.nav-collapse -->

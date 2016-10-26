@@ -5,7 +5,7 @@
 <html>
   <head>
     <meta charset="ISO-8859-1">
-    <title>Sistema de Filmes</title>
+    <title>Sistema de Pacotes Turísticos</title>
     <link href="<%=request.getContextPath()%>/resources/css/bootstrap.min.css" rel="stylesheet">
     <link href="<%=request.getContextPath()%>/resources/css/sticky-footer-navbar.css" rel="stylesheet">
   </head>
