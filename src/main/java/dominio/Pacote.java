@@ -148,17 +148,17 @@ public class Pacote implements Serializable {
 		return true;
 	}
 
-	public BigDecimal precoTotal() {
+	public BigDecimal getPrecoTotal() {
 		
 		BigDecimal diariasH = hotel.getDiaria().multiply(new BigDecimal(diarias));
 		
 		BigDecimal soma = new BigDecimal("0.00");
 		
-		return soma.add(precoPasseio().add(diariasH));
+		return soma.add(getPrecoPasseio().add(diariasH));
 		
 	}
 	
-	public BigDecimal precoPasseio() {
+	public BigDecimal getPrecoPasseio() {
 		BigDecimal soma = new BigDecimal("0.00");
 		for(Item i : itens){
 			soma = soma.add(i.getPasseio().getPreco());
